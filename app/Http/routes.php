@@ -11,4 +11,4 @@
 |
 */
 
-Route::resource('adverts', 'ApplicationController');
+Route::resource('/', 'ApplicationController');

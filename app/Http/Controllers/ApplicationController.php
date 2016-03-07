@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use \Exception;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,8 +15,8 @@ use App\AdvCash\validationSendMoney;
 
 class ApplicationController extends Controller
 {
-    protected function create() {
-        return view('adverts.create');
+    protected function index() {
+        return view('application.index');
     }
     protected function store(Request $request){
         $fields = $request->only(['price', 'text']);
@@ -51,7 +51,7 @@ class ApplicationController extends Controller
 
             //echo print_r($sendMoneyResponse, true)."<br/><br/>";
             //echo $sendMoneyResponse->return."<br/><br/>";
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             echo "ERROR MESSAGE => " . $e->getMessage() . "<br/>";
             echo $e->getTraceAsString();
         }

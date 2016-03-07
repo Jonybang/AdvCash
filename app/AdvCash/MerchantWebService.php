@@ -2,6 +2,9 @@
 
 namespace App\AdvCash;
 
+use \SoapClient;
+use \Exception;
+
 if (!class_exists("transferBankCard")) {
 /**
  * transferBankCard
