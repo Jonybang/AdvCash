@@ -19,20 +19,19 @@ class ApplicationController extends Controller
         return view('application.index');
     }
     protected function store(Request $request){
-        $fields = $request->only(['price', 'text']);
-
+        $fields = $request->only(['price', 'email', 'text']);
         $merchantWebService = new MerchantWebService();
 
         $arg0 = new authDTO();
-        $arg0->apiName = "api_name";
-        $arg0->accountEmail = "account_email";
-        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken("api_password");
+        $arg0->apiName = $_ENV['API_NAME'];
+        $arg0->accountEmail = $_ENV['ACC_EMAIL'];
+        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken($_ENV['API_PASS']);
 
         $arg1 = new sendMoneyRequest();
-        $arg1->amount = 1.00;
+        $arg1->amount = $fields['price'];
         $arg1->currency = "USD";
-        $arg1->email = "receiver_email";
-        $arg1->note = "note";
+        $arg1->email = $fields['email'];
+        $arg1->note = $fields['text'];
         $arg1->savePaymentTemplate = false;
 
         $validationSendMoney = new validationSendMoney();
@@ -55,6 +54,6 @@ class ApplicationController extends Controller
             echo "ERROR MESSAGE => " . $e->getMessage() . "<br/>";
             echo $e->getTraceAsString();
         }
-        return view('adverts.create', ['response' => $sendMoneyResponse]);
+        return view('application.success', ['response' => $sendMoneyResponse]);
     }
 }
