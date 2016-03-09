@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\AdvCash\MerchantWebService;
+use App\AdvCash\MerchantWebServiceFixes;
 use App\AdvCash\authDTO;
 use App\AdvCash\sendMoney;
 use App\AdvCash\sendMoneyRequest;
@@ -20,12 +20,15 @@ class ApplicationController extends Controller
     }
     protected function store(Request $request){
         $fields = $request->only(['price', 'email', 'text']);
-        $merchantWebService = new MerchantWebService();
+        $merchantWebService = new MerchantWebServiceFixes();
 
         $arg0 = new authDTO();
-        $arg0->apiName = $_ENV['API_NAME'];
-        $arg0->accountEmail = $_ENV['ACC_EMAIL'];
-        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken($_ENV['API_PASS']);
+        $arg0->apiName = 'awdasd';
+        $arg0->accountEmail = 'andrey.novack@mail.ru';
+        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken('awdasd123');
+//        $arg0->apiName = $_ENV['API_NAME'];
+//        $arg0->accountEmail = $_ENV['ACC_EMAIL'];
+//        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken($_ENV['API_PASS']);
 
         $arg1 = new sendMoneyRequest();
         $arg1->amount = $fields['price'];
