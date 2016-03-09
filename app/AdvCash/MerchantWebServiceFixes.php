@@ -2,7 +2,9 @@
 namespace App\AdvCash;
 
 use App\AdvCash\MerchantWebService;
-use App\AdvCash\ValidationSendMoneyResponse;
+use App\AdvCash\validationSendMoneyResponse;
+
+//class_alias('foo', 'bar');
 
 class MerchantWebServiceFixes extends MerchantWebService {
     public function transferBankCard($mixed = null) {
@@ -195,7 +197,7 @@ class MerchantWebServiceFixes extends MerchantWebService {
         );
         $args = func_get_args();
         $this->_checkArguments($args, $validParameters);
-        return $this->__soapCall('ValidationSendMoney', $args);
+        return $this->__soapCall('validationSendMoney', $args);
     }
     public function validateCurrencyExchange($mixed = null) {
         $validParameters = array(
