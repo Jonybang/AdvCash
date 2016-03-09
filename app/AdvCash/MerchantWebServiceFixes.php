@@ -139,6 +139,18 @@ class MerchantWebServiceFixes extends MerchantWebService {
         "CodeIsNotValidException" => "CodeIsNotValidException",
     );
 
+    public function __construct($wsdl="https://wallet.advcash.com:8443/wsm/merchantWebService?wsdl", $options=array()) {
+        foreach(self::$classmap as $wsdlClassName => $phpClassName) {
+            if(!isset($options['classmap'][$wsdlClassName])) {
+                $options['classmap'][$wsdlClassName] = $phpClassName;
+            }
+        }
+        echo print_r($options, true);
+        $options['location'] = 'https://wallet.advcash.com:8443/wsm/merchantWebService';
+        libxml_disable_entity_loader(false);
+        parent::__construct($wsdl, $options);
+    }
+
     public function transferBankCard($mixed = null) {
         $validParameters = array(
             '(App\AdvCash\transferBankCard)',
