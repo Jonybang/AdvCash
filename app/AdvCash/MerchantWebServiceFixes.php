@@ -145,7 +145,6 @@ class MerchantWebServiceFixes extends MerchantWebService {
                 $options['classmap'][$wsdlClassName] = $phpClassName;
             }
         }
-        echo print_r($options, true);
         $options['location'] = 'https://wallet.advcash.com:8443/wsm/merchantWebService';
         libxml_disable_entity_loader(false);
         parent::__construct($wsdl, $options);

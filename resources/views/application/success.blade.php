@@ -5,4 +5,7 @@
     <pre>
         {!! print_r($response, true) !!}
     </pre>
+    <pre>
+        {!! $sendMoneyResponse->return !!}
+    </pre>
 @endsection
