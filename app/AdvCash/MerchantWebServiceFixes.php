@@ -73,7 +73,7 @@ class MerchantWebServiceFixes extends MerchantWebService {
         "makeCurrencyExchange" => "makeCurrencyExchange",
         "makeCurrencyExchangeResponse" => "makeCurrencyExchangeResponse",
         "validationSendMoney" => "validationSendMoney",
-        "validationSendMoneyResponse" => 'App\\AdvCash\\validationSendMoneyResponse',
+        "validationSendMoneyResponse" => 'App\AdvCash\validationSendMoneyResponse',
         "validateCurrencyExchange" => "validateCurrencyExchange",
         "validateCurrencyExchangeResponse" => "validateCurrencyExchangeResponse",
         "validateWithdrawalThroughExternalPaymentSystem" => "validateWithdrawalThroughExternalPaymentSystem",
