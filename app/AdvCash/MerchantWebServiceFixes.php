@@ -2,6 +2,7 @@
 namespace App\AdvCash;
 
 use App\AdvCash\MerchantWebService;
+use App\AdvCash\ValidationSendMoneyResponse;
 
 class MerchantWebServiceFixes extends MerchantWebService {
     public function transferBankCard($mixed = null) {
