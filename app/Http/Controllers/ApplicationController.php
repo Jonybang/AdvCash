@@ -23,12 +23,12 @@ class ApplicationController extends Controller
         $merchantWebService = new MerchantWebServiceFixes();
 
         $arg0 = new authDTO();
-        $arg0->apiName = 'awdasd';
-        $arg0->accountEmail = 'andrey.novack@mail.ru';
-        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken('awdasd123');
-//        $arg0->apiName = $_ENV['API_NAME'];
-//        $arg0->accountEmail = $_ENV['ACC_EMAIL'];
-//        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken($_ENV['API_PASS']);
+//        $arg0->apiName = 'awdasd';
+//        $arg0->accountEmail = 'andrey.novack@mail.ru';
+//        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken('awdasd123');
+        $arg0->apiName = $_ENV['API_NAME'];
+        $arg0->accountEmail = $_ENV['ACC_EMAIL'];
+        $arg0->authenticationToken = $merchantWebService->getAuthenticationToken($_ENV['API_PASS']);
 
         $arg1 = new sendMoneyRequest();
         $arg1->amount = $fields['price'];
