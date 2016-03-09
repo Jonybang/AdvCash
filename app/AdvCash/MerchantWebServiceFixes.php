@@ -195,7 +195,7 @@ class MerchantWebServiceFixes extends MerchantWebService {
         );
         $args = func_get_args();
         $this->_checkArguments($args, $validParameters);
-        return $this->__soapCall('validationSendMoney', $args);
+        return $this->__soapCall('ValidationSendMoney', $args);
     }
     public function validateCurrencyExchange($mixed = null) {
         $validParameters = array(
