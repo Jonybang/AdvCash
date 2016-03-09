@@ -28,8 +28,8 @@
       <file leaf-file-name="MerchantWebService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/AdvCash/MerchantWebService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0">
-              <caret line="2134" column="35" selection-start-line="2134" selection-start-column="11" selection-end-line="2134" selection-end-column="35" />
+            <state vertical-scroll-proportion="-1.0909091">
+              <caret line="1105" column="0" selection-start-line="1105" selection-start-column="0" selection-end-line="1110" selection-end-column="2" />
               <folding>
                 <element signature="e#31#47#0#PHP" expanded="true" />
               </folding>
@@ -40,8 +40,8 @@
       <file leaf-file-name="MerchantWebServiceFixes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/AdvCash/MerchantWebServiceFixes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58171743">
-              <caret line="199" column="35" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.41551247">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding>
                 <element signature="e#30#65#0#PHP" expanded="true" />
               </folding>
@@ -855,8 +855,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AdvCash/MerchantWebService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0">
-          <caret line="2134" column="35" selection-start-line="2134" selection-start-column="11" selection-end-line="2134" selection-end-column="35" />
+        <state vertical-scroll-proportion="-1.0909091">
+          <caret line="1105" column="0" selection-start-line="1105" selection-start-column="0" selection-end-line="1110" selection-end-column="2" />
           <folding>
             <element signature="e#31#47#0#PHP" expanded="true" />
           </folding>
@@ -865,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AdvCash/MerchantWebServiceFixes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58171743">
-          <caret line="199" column="35" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.41551247">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding>
             <element signature="e#30#65#0#PHP" expanded="true" />
           </folding>

@@ -3,7 +3,12 @@ namespace App\AdvCash;
 
 use App\AdvCash\MerchantWebService;
 use App\AdvCash\validationSendMoneyResponse;
-
+if (!class_exists("validationSendMoneyResponse")) {
+    /**
+     * validationSendMoneyResponse
+     */
+    class validationSendMoneyResponse {
+    }}
 //class_alias('foo', 'bar');
 
 class MerchantWebServiceFixes extends MerchantWebService {
