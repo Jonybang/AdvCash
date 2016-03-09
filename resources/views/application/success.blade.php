@@ -6,6 +6,6 @@
         {!! print_r($response, true) !!}
     </pre>
     <pre>
-        {!! $sendMoneyResponse->return !!}
+        {!! $response->return !!}
     </pre>
 @endsection
